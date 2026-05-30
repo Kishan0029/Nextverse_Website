@@ -4,7 +4,7 @@ Nextverse Site Optimizer - Tasks 2, 3, 4
 """
 import os, re, glob
 
-BASE_DIR = r"c:\Users\kisha\Desktop\simply-static-1-1780122567"
+BASE_DIR = "."
 
 SEO_MAP = {
     "index.html": ("Nextverse | Creative Digital Agency", "Nextverse is a premium creative agency specializing in motion design, branding, and digital experiences that captivate audiences."),

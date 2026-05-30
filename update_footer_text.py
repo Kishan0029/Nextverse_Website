@@ -2,7 +2,7 @@ import os
 import glob
 import re
 
-base_dir = r"c:\Users\kisha\Desktop\simply-static-1-1780122567"
+base_dir = "."
 html_files = glob.glob(os.path.join(base_dir, "**/*.html"), recursive=True)
 
 old_pattern = r'LET’S\s*<span class="has-stoke">\s*get\s*</span>\s*IN\s*<span class="has-stoke">\s*TOUCH\s*</span>'

@@ -1,7 +1,7 @@
 import os
 import re
 
-base_dir = r"c:\Users\kisha\Desktop\simply-static-1-1780122567"
+base_dir = "."
 index_html_path = os.path.join(base_dir, "index.html")
 
 with open(index_html_path, 'r', encoding='utf-8', errors='ignore') as f:
