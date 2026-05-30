@@ -1,0 +1,73 @@
+.envato-ocdi-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.envato-ocdi-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.envato-ocdi-popup-content {
+    background: #fff;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.envato-ocdi-popup.active .envato-ocdi-popup-content {
+    transform: translateY(0);
+}
+
+.envato-ocdi-popup-header {
+    background: #5622b1;
+    color: #fff;
+    padding: 20px;
+}
+
+.envato-ocdi-popup-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.envato-ocdi-popup-body {
+    padding: 25px;
+    line-height: 1.6;
+}
+
+.envato-ocdi-popup-footer {
+    padding: 15px 25px;
+    text-align: right;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.envato-ocdi-verify-btn {
+    background: #2271b1;
+    border-color: #1a5f8e;
+    color: #fff;
+}
+
+.envato-ocdi-verify-btn:hover {
+    background: #1a5f8e;
+    border-color: #154e77;
+    color: #fff;
+}

@@ -1,0 +1,33 @@
+
+/* 
+    cta-9-start
+*/
+.agn-cta-9-content {
+    max-width: 570px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .agn-cta-9-content .agn-sec-title-9 {
+    font-size: 32px;
+    color: var(--agn-clr-white-1);
+    margin-bottom: 43px;
+  }
+  .agn-cta-9-content .agn-cta-5-form {
+    max-width: 454px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .agn-cta-9-content .agn-cta-5-form-input {
+    color: rgba(255, 255, 255, 0.64);
+    border-color: var(--agn-clr-sd-9);
+  }
+  .agn-cta-9-content .agn-cta-5-form-input:focus {
+    border-color: var(--agn-clr-pr-9);
+  }
+  .agn-cta-9-content .agn-cta-5-form-btn {
+    color: var(--agn-clr-sd-9);
+  }
+  .agn-cta-9-content .agn-cta-5-form-btn:hover {
+    color: var(--agn-clr-pr-9);
+  }
