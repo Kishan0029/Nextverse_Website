@@ -17949,3 +17949,170 @@ elevenlabs-convai {
 .elementor-widget-agenriver-breadcrumb {
     display: none !important;
 }
+
+/* =============================================
+   NEXTVERSE — MOBILE RESPONSIVE OVERRIDES
+   Targets: phones (max 767px) and tablets (768–991px)
+   ============================================= */
+
+/* ---- TABLET (768px – 991px) ---- */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  /* Hero title */
+  .agn-hero-3-title {
+    font-size: 52px !important;
+    max-width: 100% !important;
+    margin-bottom: 60px !important;
+  }
+
+  /* Hero content block */
+  .agn-hero-3-content {
+    margin-top: 20px !important;
+    margin-right: 0 !important;
+  }
+
+  /* Customer review */
+  .agn-customer-review {
+    margin-top: 16px !important;
+  }
+
+  /* Header nav font size */
+  .agn-header-3 .agn-main-navigation .navbar-nav li a {
+    font-size: 15px !important;
+  }
+
+  /* ElevenLabs widget — smaller on tablet */
+  elevenlabs-convai {
+    transform: scale(0.85);
+    transform-origin: bottom right;
+  }
+}
+
+/* ---- MOBILE (max 767px) ---- */
+@media (max-width: 767px) {
+
+  /* === HERO SECTION === */
+  .agn-hero-3-title {
+    font-size: 36px !important;
+    max-width: 100% !important;
+    margin-bottom: 24px !important;
+    line-height: 1.15 !important;
+  }
+
+  .agn-hero-3-content {
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 16px !important;
+    text-align: left !important;
+  }
+
+  /* Hero paragraph text */
+  .agn-hero-3-content .agn-p-3 {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Book a Free Demo button — full width on mobile */
+  .agn-hero-3-content .agn-pr-btn-3 {
+    width: auto !important;
+    margin-top: 10px !important;
+  }
+
+  /* Hero section min-height to prevent collapse */
+  .agn-hero-3-area {
+    min-height: auto !important;
+    padding-bottom: 60px !important;
+  }
+
+  /* === HEADER === */
+  .agn-header-3 .agn-main-navigation .navbar-nav li a {
+    font-size: 15px !important;
+  }
+
+  .agn-header-3-logo img {
+    max-width: 130px !important;
+  }
+
+  /* Hide search bar on mobile to save space */
+  .agn-header-search-form {
+    display: none !important;
+  }
+
+  /* === CUSTOMER REVIEW === */
+  .agn-customer-review {
+    margin-top: 24px !important;
+  }
+
+  /* === ELEVENLABS WIDGET — move to bottom right, scale down === */
+  elevenlabs-convai {
+    transform: scale(0.8) !important;
+    transform-origin: bottom right !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+
+  /* === GENERAL SECTION PADDING === */
+  .elementor-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* === ABOUT SECTION ON HOMEPAGE === */
+  .agn-about-3-wrap {
+    flex-direction: column !important;
+  }
+
+  .agn-about-3-img {
+    width: 100% !important;
+    margin-top: 24px !important;
+  }
+
+  /* === SERVICES SECTION === */
+  .agn-service-3-item {
+    margin-bottom: 24px !important;
+  }
+
+  /* === FOOTER === */
+  .agn-footer-3-menu {
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    justify-content: center !important;
+  }
+
+  .agn-footer-3-menu .menu-link {
+    font-size: 14px !important;
+  }
+
+  .arv-footer-1-bottom-list {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  /* === MARQUEE / SCROLLING TEXT === */
+  .agn-footer-3-get-touch-text h3 {
+    font-size: 28px !important;
+  }
+
+  /* === ANIMATIONS — keep them alive on mobile === */
+  /* Ensure WOW and GSAP animations still trigger on mobile */
+  .wow {
+    visibility: visible !important;
+    animation-name: fadeInUp !important;
+  }
+
+  /* Ensure the loader text scales properly */
+  .agn-loader-wrap-heading .load-text {
+    font-size: 28px !important;
+    letter-spacing: -2px !important;
+  }
+
+  /* === MOBILE MENU === */
+  .mobile_menu_content {
+    width: 85vw !important;
+  }
+}
+
+/* =============================================
+   END MOBILE RESPONSIVE OVERRIDES
+   ============================================= */
