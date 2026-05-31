@@ -18572,3 +18572,53 @@ body {
 /* =============================================
    END Mobile Hero + Header UI Pack v4
    ============================================= */
+
+/* =============================================
+   NEXTVERSE — Mobile Spinner: Above text + Grow/Fade anim
+   ============================================= */
+@media (max-width: 767px) {
+
+  /* Move spinner ABOVE the hero title */
+  .agn-hero-3-animation {
+    order: 0 !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    z-index: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 110px 0 10px !important;
+  }
+
+  /* Hero main content sits below the spinner */
+  .agn-hero-3-main {
+    order: 1 !important;
+  }
+
+  /* Grow + Fade + Rotate animation — mimics PC scroll grow effect */
+  .agn-hero-3-animation-shape img {
+    width: 240px !important;
+    height: 240px !important;
+    object-fit: contain !important;
+    animation: mobileSpinGrow 6s ease-in-out infinite !important;
+    transform-origin: center center !important;
+  }
+
+  @keyframes mobileSpinGrow {
+    0%   { transform: rotate(0deg)   scale(0.75); opacity: 0.5; }
+    30%  { transform: rotate(108deg) scale(1.08); opacity: 1;   }
+    60%  { transform: rotate(216deg) scale(0.9);  opacity: 0.8; }
+    100% { transform: rotate(360deg) scale(0.75); opacity: 0.5; }
+  }
+
+  /* Reduce hero title top padding so it sits snug below spinner */
+  .agn-hero-3-wrap {
+    padding-top: 16px !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+/* =============================================
+   END Mobile Spinner Fix
+   ============================================= */
