@@ -18269,3 +18269,56 @@ body {
 /* =============================================
    END Hero White Lines Fix
    ============================================= */
+
+/* =============================================
+   NEXTVERSE — Targeted Fixes v3
+   ============================================= */
+
+/* -- Fix 1: Left white line — true full-bleed using negative margin -- */
+.agn-hero-3-area {
+  position: relative !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* -- Fix 2: Revert spinning object size — let original image size and CSS animation play -- */
+.agn-hero-3-animation {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.agn-hero-3-animation-shape img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  animation: agnH3shape 20s linear infinite !important;
+}
+
+/* Remove the broken spin-slow override for mobile — use the original animation */
+@media (max-width: 991px) {
+  .agn-hero-3-animation-shape img {
+    width: auto !important;
+    height: auto !important;
+    animation: agnH3shape 20s linear infinite !important;
+  }
+}
+
+/* -- Fix 3: Do NOT block GSAP transforms on services cards --
+   Remove the transform:none that was blocking scroll animations */
+.agn-service-3-item-single {
+  transform: unset !important;
+  transition: unset !important;
+}
+.agn-service-3-item-single:active {
+  transform: unset !important;
+  box-shadow: 0 12px 40px rgba(191, 1, 255, 0.25) !important;
+}
+
+/* =============================================
+   END Targeted Fixes v3
+   ============================================= */
