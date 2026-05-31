@@ -2886,9 +2886,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .agn-pr-btn-3 .shape path {
   fill: #BF01FF;
 }
-.agn-pr-btn-3:hover .shape {
-  transform: scaleY(0);
-}
+
 .agn-pr-btn-3:hover .icon i:nth-child(1) {
   transform: translateX(0);
 }
@@ -17892,3 +17890,62 @@ input:focus::placeholder, textarea:focus::placeholder {
 	preloader-css-end
 */
 /*# sourceMappingURL=main.css.map */
+
+/* Fix for ElevenLabs Widget overlapping preloader */
+.agn-loader-wrap {
+    z-index: 2147483647 !important;
+}
+
+/* Header Logo Size Fix */
+.agn-header-3-logo img, .logo_site-m-size {
+    max-width: 180px !important;
+    height: auto !important;
+}
+
+/* Delay ElevenLabs Widget to prevent preloader overlap */
+elevenlabs-convai {
+    animation: elevenlabs-delay 4s ease-out forwards !important;
+    opacity: 0;
+    z-index: 99 !important;
+}
+
+@keyframes elevenlabs-delay {
+    0% { opacity: 0; transform: translateY(100px); }
+    85% { opacity: 0; transform: translateY(100px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Fix Hero Section Overflow and Overlap */
+.agn-hero-3-title {
+    margin-bottom: 130px !important;
+}
+
+
+/* Shift Hero Text and Button Up and Left */
+.agn-hero-3-content {
+    margin-top: 41px !important;
+    margin-right: 10px !important;
+}
+
+/* Make Hero Title Smaller and Wider */
+.agn-hero-3-title {
+    font-size: 76px !important;
+    max-width: 1000px !important;
+}
+
+/* Increase Header Nav Link Size */
+.agn-header-3 .agn-main-navigation .navbar-nav li a {
+    font-size: 18px !important;
+}
+
+/* Push Customer Review Down */
+.agn-customer-review {
+    margin-top: 30px !important;
+}
+
+/* Hide Breadcrumbs Safely */
+.elementor-widget-agenriver-breadcrumb {
+    display: none !important;
+}
