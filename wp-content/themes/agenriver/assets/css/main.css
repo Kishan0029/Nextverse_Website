@@ -3867,7 +3867,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   gap: 5px;
   cursor: pointer;
   position: fixed;
-  right: 30px;
+  left: 30px;
+  right: auto;
   bottom: -100px;
   z-index: 3;
   width: 30px;
@@ -3879,7 +3880,8 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 @media (max-width: 767px) {
   .agn-back-to-top {
-    right: 15px;
+    left: 15px;
+    right: auto;
   }
 }
 .agn-back-to-top .icon {
