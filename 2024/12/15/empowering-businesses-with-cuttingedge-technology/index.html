@@ -771,6 +771,22 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <elevenlabs-convai agent-id="agent_2601kstqgt7qe34b7f7nk2x4yygj"></elevenlabs-convai>
 <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new MutationObserver(() => {
+      const widget = document.querySelector('elevenlabs-convai');
+      if (widget && widget.shadowRoot) {
+        const style = document.createElement('style');
+        style.textContent = 'a[href*="elevenlabs.io"], .powered-by, [class*="footer"], [class*="powered"], [class*="watermark"] { display: none !important; }';
+        widget.shadowRoot.appendChild(style);
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+</script>
+
 </body>
 
 </html>
