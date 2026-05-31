@@ -18734,3 +18734,20 @@ body {
 /* =============================================
    END Footer Mobile Fix
    ============================================= */
+
+/* =============================================
+   NEXTVERSE — Mobile Hero Background Fade Fix
+   ============================================= */
+@media (max-width: 767px) {
+  /* Make the video background taller than the content and fade it out smoothly */
+  .agn-hero-3-bg {
+    height: 130% !important; /* Extend past the hero section */
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%) !important;
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%) !important;
+  }
+  
+  /* Add padding to the bottom of the hero wrap so the fade happens smoothly before About Us */
+  .agn-hero-3-wrap {
+    padding-bottom: 80px !important;
+  }
+}
