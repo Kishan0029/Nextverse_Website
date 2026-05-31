@@ -18622,3 +18622,10 @@ body {
 /* =============================================
    END Mobile Spinner Fix
    ============================================= */
+
+/* Hide preloader completely on mobile */
+@media (max-width: 991px) {
+  .agn-loader-wrap {
+    display: none !important;
+  }
+}
