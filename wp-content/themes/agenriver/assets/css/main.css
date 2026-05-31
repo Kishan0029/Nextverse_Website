@@ -18629,3 +18629,108 @@ body {
     display: none !important;
   }
 }
+
+/* =============================================
+   NEXTVERSE — Footer Mobile Fix + Logo Size
+   ============================================= */
+@media (max-width: 767px) {
+
+  /* -- Logo size in header on mobile -- */
+  .agn-header-3-logo img {
+    max-width: 120px !important;
+    height: auto !important;
+  }
+
+  /* -- Footer: stack columns vertically -- */
+  .arv-footer-1-top-wrap,
+  .arv-footer-1-widget-wrap {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  /* Footer columns full width */
+  .arv-footer-1-widget-area,
+  .arv-footer-1-col,
+  [class*='elementor-col-'] .arv-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Footer logo */
+  .arv-footer-1-logo img {
+    max-width: 140px !important;
+    height: auto !important;
+  }
+
+  /* Footer description text */
+  .arv-footer-1-about-desc {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* Footer bottom bar: stack copyright + links */
+  .arv-footer-1-bottom-wrap,
+  .arv-footer-1-bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+
+  /* Footer legal links row */
+  .arv-footer-1-bottom-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px 16px !important;
+    padding: 0 !important;
+  }
+
+  .arv-footer-1-bottom-list li {
+    list-style: none !important;
+  }
+
+  .arv-footer-1-bottom-list li a {
+    font-size: 13px !important;
+    color: rgba(255,255,255,0.6) !important;
+  }
+
+  .arv-footer-1-bottom-list li a:hover {
+    color: #BF01FF !important;
+  }
+
+  /* Footer marquee / large get in touch text */
+  .agn-footer-3-get-touch-text h3,
+  .agn-footer-marquee h3 {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Footer menu links */
+  .arv-footer-1-menu ul {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .arv-footer-1-menu ul li a {
+    font-size: 15px !important;
+  }
+
+  /* Footer social icons */
+  .agn-footer-3-social,
+  .arv-footer-1-social {
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+
+  /* General footer section padding */
+  .arv-footer-1-area,
+  [class*='arv-footer'] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* =============================================
+   END Footer Mobile Fix
+   ============================================= */

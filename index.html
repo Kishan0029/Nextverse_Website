@@ -1442,6 +1442,49 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   });
 </script>
 
+
+<script>
+/* Nextverse — Mobile scroll-driven spinner animation */
+(function () {
+  if (window.innerWidth > 767) return;
+
+  var img = document.querySelector('.agn-hero-3-animation-shape img');
+  var hero = document.querySelector('.agn-hero-3-height');
+  if (!img || !hero) return;
+
+  /* Kill the CSS loop animation — JS takes over */
+  img.style.animation = 'none';
+
+  var rotation = 0;
+  var lastY = window.scrollY;
+
+  function onScroll() {
+    if (window.innerWidth > 767) return;
+
+    var heroTop   = hero.getBoundingClientRect().top + window.scrollY;
+    var heroH     = hero.offsetHeight || window.innerHeight;
+    var scrolled  = window.scrollY - heroTop;
+    /* progress 0→1 across the hero section */
+    var progress  = Math.max(0, Math.min(1, scrolled / (heroH * 0.75)));
+
+    /* scale: 1 → 5 */
+    var scale   = 1 + progress * 4;
+    /* opacity: 1 → 0 */
+    var opacity = 1 - progress;
+    /* rotation: keep spinning, speed tied to scroll delta */
+    var delta = window.scrollY - lastY;
+    rotation += delta * 0.8;
+    lastY = window.scrollY;
+
+    img.style.transform = 'scale(' + scale + ') rotate(' + rotation + 'deg)';
+    img.style.opacity   = opacity;
+    img.style.transition = 'opacity 0.1s linear';
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); /* run once on load */
+})();
+</script>
 </body>
 
 </html>
