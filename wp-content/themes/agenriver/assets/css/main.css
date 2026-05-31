@@ -18323,3 +18323,252 @@ body {
    END Targeted Fixes v3
    ============================================= */
 /* cache-bust: v20260531-2238 */
+
+/* =============================================
+   NEXTVERSE — Mobile Hero + Header UI Pack v4
+   ============================================= */
+
+/* ???????????????????????????????????????????
+   1. HERO SECTION MOBILE: spinning object BELOW text, no overlap
+   ??????????????????????????????????????????? */
+@media (max-width: 767px) {
+  /* Stack hero vertically so animation is BELOW the text */
+  .agn-hero-3-height {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+
+  .agn-hero-3-main {
+    order: 1 !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  /* Spinning object: pull out of absolute, place below text */
+  .agn-hero-3-animation {
+    order: 2 !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    z-index: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 30px 0 40px !important;
+  }
+
+  /* ???????????????????????????????????????????
+     2. SPINNING OBJECT: bigger on mobile
+     ??????????????????????????????????????????? */
+  .agn-hero-3-animation-shape img {
+    width: 260px !important;
+    height: 260px !important;
+    object-fit: contain !important;
+    /* ???????????????????????????????????????????
+       3. SCROLL ANIMATION: use the original spin anim + CSS scroll effect
+       ??????????????????????????????????????????? */
+    animation: agnH3shape 20s linear infinite !important;
+  }
+
+  /* Reduce hero text top padding so it doesn't push too far down */
+  .agn-hero-3-wrap {
+    padding-top: 120px !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+/* ???????????????????????????????????????????
+   4a. MOBILE HEADER: clean layout, logo + hamburger
+   ??????????????????????????????????????????? */
+@media (max-width: 991px) {
+  .agn-header-3-area {
+    padding: 14px 20px !important;
+  }
+
+  .agn-header-3-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
+    gap: 12px !important;
+  }
+
+  .agn-header-3-left {
+    flex: 1 !important;
+  }
+
+  .agn-header-3-logo img {
+    max-width: 140px !important;
+    height: auto !important;
+  }
+
+  /* Hide "Contact Us" button text on mobile — too cramped */
+  .agn-pr-btn-3.header-btn-breakpoint {
+    display: none !important;
+  }
+
+  /* Hide search bar in header on mobile */
+  .agn-header-search-form {
+    display: none !important;
+  }
+
+  /* Hamburger button — clean modern 3-bar design */
+  .agn-header-3-hamburger {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+    gap: 5px !important;
+    cursor: pointer !important;
+    padding: 8px !important;
+    border-radius: 8px !important;
+    transition: background 0.2s !important;
+  }
+
+  .agn-header-3-hamburger:hover {
+    background: rgba(191, 1, 255, 0.12) !important;
+  }
+
+  .agn-header-3-hamburger span:nth-child(1) { width: 24px !important; }
+  .agn-header-3-hamburger span:nth-child(2) { width: 18px !important; } /* shorter middle bar = modern look */
+  .agn-header-3-hamburger span:nth-child(3) { width: 24px !important; }
+
+  .agn-header-3-hamburger span {
+    display: block !important;
+    height: 2px !important;
+    background: #ffffff !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+  }
+}
+
+/* ???????????????????????????????????????????
+   4b. MOBILE SIDEBAR DRAWER: premium dark UI
+   ??????????????????????????????????????????? */
+
+/* Sidebar background — dark Nextverse brand gradient */
+.mobile_menu_content {
+  background: linear-gradient(160deg, #070122 0%, #0f0235 60%, #180040 100%) !important;
+  border-right: 1px solid rgba(191, 1, 255, 0.2) !important;
+  box-shadow: 4px 0 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Logo in sidebar — proper size + spacing */
+.m-brand-logo {
+  padding: 32px 24px 20px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  margin-bottom: 8px !important;
+}
+
+.m-brand-logo img.logo_site-m-size {
+  max-width: 160px !important;
+  height: auto !important;
+  filter: brightness(0) invert(1) !important; /* force pure white */
+  display: block !important;
+}
+
+/* Close (X) button — top right, white */
+.mobile_menu_close {
+  position: absolute !important;
+  top: 18px !important;
+  right: 18px !important;
+  width: 34px !important;
+  height: 34px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,0.06) !important;
+  cursor: pointer !important;
+  transition: background 0.2s !important;
+}
+
+.mobile_menu_close:hover {
+  background: rgba(191, 1, 255, 0.2) !important;
+}
+
+.mobile_menu_close i {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 16px !important;
+}
+
+/* Hide search bar in sidebar — not needed */
+.mobile-search-bar {
+  display: none !important;
+}
+
+/* Navigation links — large, clear, premium */
+.mobile-main-navigation {
+  padding: 12px 0 !important;
+}
+
+.mobile-main-navigation ul {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+.mobile-main-navigation ul li {
+  border: none !important;
+}
+
+.mobile-main-navigation ul li a {
+  display: flex !important;
+  align-items: center !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  padding: 16px 24px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  transition: all 0.25s ease !important;
+  letter-spacing: 0.2px !important;
+  text-decoration: none !important;
+}
+
+.mobile-main-navigation ul li a:hover,
+.mobile-main-navigation ul li a:active {
+  color: #BF01FF !important;
+  padding-left: 32px !important;
+  background: rgba(191, 1, 255, 0.06) !important;
+}
+
+/* Social icons row in sidebar */
+.ptx-mobile-header-social {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 24px !important;
+  margin-top: auto !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.ptx-mobile-header-social a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  transition: all 0.25s ease !important;
+}
+
+.ptx-mobile-header-social a:hover {
+  border-color: #BF01FF !important;
+  color: #BF01FF !important;
+  background: rgba(191, 1, 255, 0.08) !important;
+}
+
+.ptx-mobile-header-social svg {
+  width: 15px !important;
+  height: 15px !important;
+  fill: currentColor !important;
+}
+
+/* =============================================
+   END Mobile Hero + Header UI Pack v4
+   ============================================= */
