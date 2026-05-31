@@ -18751,3 +18751,28 @@ body {
     padding-bottom: 80px !important;
   }
 }
+
+
+/* =============================================
+   NEXTVERSE — Seamless Hero-to-About Fade
+   ============================================= */
+@media (max-width: 767px) {
+  /* Give the entire hero container the dark Nextverse background */
+  /* This prevents ANY white from showing beneath the fade */
+  .agn-hero-3-area,
+  .elementor-element-7e210caa {
+    background-color: #050118 !important;
+  }
+
+  /* Make the video taller to overlap the padding, and fade it out smoothly to the #050118 color */
+  .agn-hero-3-bg {
+    height: 110% !important; 
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%) !important;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%) !important;
+  }
+  
+  /* Add padding to push the About section down slightly so the fade is visible */
+  .agn-hero-3-wrap {
+    padding-bottom: 60px !important;
+  }
+}
