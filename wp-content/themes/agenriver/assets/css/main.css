@@ -18116,3 +18116,120 @@ elevenlabs-convai {
 /* =============================================
    END MOBILE RESPONSIVE OVERRIDES
    ============================================= */
+
+/* =============================================
+   NEXTVERSE — MOBILE FIX PACK v2
+   ============================================= */
+
+/* -- 1. Hide hero decorative vertical lines on mobile -- */
+@media (max-width: 991px) {
+  .agn-hero-3-line,
+  .agn-hero-3-lines,
+  [class*='hero-3-line'],
+  .agn-hero-3-shape-line {
+    display: none !important;
+  }
+}
+
+/* -- 2. Enable hero spinning / grow animation on mobile -- */
+@media (max-width: 991px) {
+  .agn-hero-3-animation {
+    display: block !important;
+    opacity: 1 !important;
+    pointer-events: none;
+  }
+  .agn-hero-3-animation-shape img {
+    width: 140px !important;
+    height: 140px !important;
+    animation: spin-slow 12s linear infinite !important;
+  }
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+}
+
+/* -- 3. Services cards — keep hover/tilt effect on mobile as tap -- */
+@media (max-width: 991px) {
+  .agn-service-3-item-single,
+  .agn-service-3-item-single:hover {
+    transform: none !important;
+    transition: box-shadow 0.3s ease !important;
+  }
+  .agn-service-3-item-single:active {
+    box-shadow: 0 12px 40px rgba(191, 1, 255, 0.25) !important;
+    transform: translateY(-4px) !important;
+  }
+}
+
+/* -- 4. Mobile hamburger button — show on mobile -- */
+@media (max-width: 991px) {
+
+  /* Show the hamburger trigger */
+  .agn-header-3-hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    width: 40px !important;
+    height: 40px !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    margin-left: 12px !important;
+  }
+
+  .agn-header-3-hamburger span {
+    display: block !important;
+    width: 26px !important;
+    height: 2px !important;
+    background: #fff !important;
+    border-radius: 2px !important;
+    transition: 0.3s !important;
+  }
+
+  /* Make the header row flex so hamburger sits on the right */
+  .agn-header-3-row {
+    position: relative !important;
+  }
+
+  /* Ensure header action area is visible but compact */
+  .agn-header-3-action-link {
+    gap: 8px !important;
+  }
+
+  /* Hide the Contact Us button text on very small screens, keep icon */
+  .agn-pr-btn-3.header-btn-breakpoint .text {
+    display: none !important;
+  }
+  .agn-pr-btn-3.header-btn-breakpoint .icon {
+    margin-left: 0 !important;
+  }
+}
+
+/* -- 5. Mobile menu drawer — ensure it slides in properly -- */
+.mobile_menu_content {
+  background: #050118 !important;
+  color: #fff !important;
+}
+
+.mobile_menu_content .mobile-main-navigation ul li a {
+  color: #fff !important;
+  font-size: 16px !important;
+  padding: 10px 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  display: block !important;
+}
+
+.mobile_menu_content .mobile-main-navigation ul li a:hover {
+  color: #BF01FF !important;
+}
+
+/* -- 6. Ensure mobile menu close button is visible -- */
+.mobile_menu_close i {
+  color: #fff !important;
+  font-size: 22px !important;
+}
+
+/* =============================================
+   END MOBILE FIX PACK v2
+   ============================================= */
