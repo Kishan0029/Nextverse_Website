@@ -437,42 +437,29 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
       const widget = document.querySelector('elevenlabs-convai');
       if (widget && widget.shadowRoot) {
         
-        // Remove custom branding if it was previously added (just in case)
-        const customBranding = widget.shadowRoot.querySelector('.custom-branding');
-        if (customBranding) customBranding.remove();
-
-        const style = document.createElement('style');
-        // Hide the ElevenLabs logo/SVG, but keep the text visible
-        style.textContent = `
-          a[href*="elevenlabs.io"] svg, a[href*="elevenlabs.io"] img { 
-            display: none !important; 
-          }
-          a[href*="elevenlabs.io"] {
-            text-decoration: none !important;
-            pointer-events: none !important;
-          }
-        `;
-        widget.shadowRoot.appendChild(style);
-        
-        // Function to find and replace text inside the widget's shadow DOM
-        const replaceText = () => {
-            const links = widget.shadowRoot.querySelectorAll('a[href*="elevenlabs.io"], [class*="powered"], [class*="footer"]');
+        const replaceContent = () => {
+            const links = widget.shadowRoot.querySelectorAll('a[href*="elevenlabs.io"], [class*="powered"]');
             links.forEach(link => {
-                const walk = document.createTreeWalker(link, NodeFilter.SHOW_TEXT, null, false);
-                let node;
-                while(node = walk.nextNode()) {
-                    if (node.nodeValue.includes('Powered by') && !node.nodeValue.includes('Nextverse AI')) {
-                        node.nodeValue = 'Powered by Nextverse AI';
-                    }
-                }
+                if(link.innerHTML.includes('text-align: right')) return;
+                
+                link.innerHTML = `
+                  <div style="text-align: right; padding: 4px 10px 4px 4px; width: 100%; box-sizing: border-box;">
+                    <span style="font-weight: 500; color: inherit; font-size: 11px; opacity: 0.6;">Powered by Nextverse AI</span>
+                  </div>
+                `;
+                
+                // Remove pointer events so it's just text
+                link.style.textDecoration = 'none';
+                link.style.pointerEvents = 'none';
+                link.style.display = 'block';
+                link.style.width = '100%';
             });
         };
         
-        replaceText();
+        replaceContent();
         
-        // Observe for dynamic re-renders inside the shadow DOM
         const shadowObserver = new MutationObserver(() => {
-          replaceText();
+          replaceContent();
         });
         shadowObserver.observe(widget.shadowRoot, { childList: true, subtree: true });
         
